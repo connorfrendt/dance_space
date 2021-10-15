@@ -1,5 +1,7 @@
 <template>
     <div>
+        <div>FIND DANCE STUDIOS</div>
+        <div>ANYWHER YOU GO</div>
         <form @submit.prevent="username">
             <div>
                 <label>
@@ -51,6 +53,5 @@ form {
     position: fixed;
     left: 50%;
     top: 50%;
-    background: red;
 }
 </style>
