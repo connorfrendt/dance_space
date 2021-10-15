@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div id="main-page">
     <div>FIND DANCE STUDIOS</div>
     <div>ANYWHERE YOU GO</div>
-
   </div>
 </template>
 
@@ -13,5 +12,7 @@ export default {
 </script>
 
 <style>
-
+#main-page {
+  
+}
 </style>
