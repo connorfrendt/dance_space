@@ -1,31 +1,29 @@
 <template>
-    <div>
-        <div>FIND DANCE STUDIOS</div>
-        <div>ANYWHER YOU GO</div>
-        <form @submit.prevent="username">
-            <div>
-                <label>
-                    Name:
-                    <input  v-model="user.name">
-                </label>
-            </div>
-            
-            <div>
-                <label>
-                    Username:
-                    <input v-model="user.username">
-                </label>
-            </div>
-            
-            <div>
-                <label>
-                    Password:
-                    <input v-model="user.password">
-                </label>
-            </div>
+    <div id="header">
+        <div>
+            <div>FIND DANCE STUDIOS</div>
+            <div>ANYWHERE YOU GO</div>
+        </div>
+        <div>
+            <form @submit.prevent="username">
+                <div>
+                    <label>
+                        Username:
+                        <input v-model="user.username">
+                    </label>
+                </div>
+                
+                <div>
+                    <label>
+                        Password:
+                        <input type="password" v-model="user.password">
+                    </label>
+                </div>
 
-            <button>Enter</button>
-        </form>
+                <button>Enter</button>
+                <router-link to="/SignUp">CREATE ACCOUNT</router-link>
+            </form>
+        </div>
     </div>
 </template>
 
@@ -42,16 +40,15 @@ export default {
     },
     methods: {
         username() {
-            console.log(this.user);
+            console.log(this.user.name, '\n', this.user.username, '\n', this.user.password);
         }
     }
 }
 </script>
 
 <style>
-form {
-    position: fixed;
-    left: 50%;
-    top: 50%;
+#header {
+    display: flex;
+    justify-content: space-between;
 }
 </style>
