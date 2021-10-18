@@ -2,7 +2,7 @@
     <div id="header">
         <div>
             <div>FIND DANCE STUDIOS</div>
-            <div>ANYWHERE YOU GO</div>
+            <div>WHEREVER YOU ARE</div>
         </div>
         <div>
             <form @submit.prevent="username">
