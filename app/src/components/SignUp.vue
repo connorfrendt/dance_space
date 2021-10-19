@@ -4,17 +4,17 @@
             <form @submit.prevent="signUp">
                 <label>
                     Name:
-                    <input type="textbox" />
+                    <input type="textbox" v-model="profile.name" />
                 </label>
             
                 <label>
                     Username:
-                    <input type="textbox" />
+                    <input type="textbox" v-model="profile.username" />
                 </label>
 
                 <label>
                     Password:
-                    <input type="password" />
+                    <input type="password" v-model="profile.password" />
                 </label>
             
                 <button>Sign Up!</button>
@@ -25,9 +25,18 @@
 
 <script>
 export default {
+    data() {
+        return {
+            profile: {
+                name: '',
+                username: '',
+                password: ''
+            }
+        }
+    },
     methods: {
         signUp() {
-            console.log('You have successfully signed up');
+            console.log(this.profile);
         }
     }
 }
@@ -41,8 +50,6 @@ export default {
 }
 
 #child {
-    /* position: absolute; */
-    bottom: 50px;
     background: lightgray;
 }
 
