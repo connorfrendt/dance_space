@@ -1,7 +1,7 @@
 <template>
     <div id="sign-up-form">
         <div id="child">
-            <form @submit.prevent="signUp">
+            <form @submit.prevent="signUp(profile)">
                 <label>
                     Name:
                     <input type="textbox" v-model="profile.name" />
@@ -34,9 +34,13 @@ export default {
             }
         }
     },
+    props: {
+        onSignUp: Function
+    },
     methods: {
         signUp() {
-            console.log(this.profile);
+            console.log('and here');
+            this.onSignUp(this.profile);
         }
     }
 }
