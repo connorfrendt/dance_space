@@ -1,7 +1,7 @@
 const client = require('../lib/db-client.js');
 
 client.query(`
-    CREATE TABLES IF NOT EXISTS profile (
+    CREATE TABLE IF NOT EXISTS profile (
         Id Serial Primary Key,
         Username VARCHAR(255) NOT NULL,
         Password VARCHAR(255) NOT NULL

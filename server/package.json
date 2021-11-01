@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "drop-tables": "node scripts/drop-tables.js"
+    "drop-tables": "node scripts/drop-tables.js",
+    "create-tables": "node scripts/create-tables.js",
+    "recreate-tables": "npm run drop-tables && npm run create-tables"
   },
   "author": "",
   "license": "ISC",
